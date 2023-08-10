@@ -18,13 +18,18 @@ Algoritmo ejercicio_08
 	SiNo
 		Si Minusculas(escala) = "f" Entonces
 			fahrenheit = N
+			celsius = 5*(fahrenheit-32)/9
+			kelvin = 5*(fahrenheit-32)/9+273.15
 		SiNo
 			Si Minusculas(escala) = "k" Entonces
 				kelvin = N
 				celsius = kelvin - 273.15
-			SiNo
-				
+				fahrenheit = 9*(kelvin-273.15)/5+32
 			FinSi
 		FinSi
 	Fin Si
+	Escribir "La temperatura ingresada equivale a: "
+	Escribir ConvertirATexto(celsius) + " ºC"
+	Escribir ConvertirATexto(fahrenheit) + " ºF"
+	Escribir ConvertirATexto(kelvin) + " ºK"
 FinAlgoritmo
